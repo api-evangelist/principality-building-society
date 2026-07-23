@@ -1,0 +1,44 @@
+generated: '2026-07-23'
+method: derived
+source: openapi/obie-open-data-swagger.json
+note: >-
+  Standards conformance is asserted for the shared OBIE Open Data API v1.3
+  reference specification carried in this repo, NOT for a Principality-operated
+  implementation. Principality Building Society is not a CMA9 bank, holds no
+  payment accounts, and is outside the scope of the PSD2 / OBIE Read/Write
+  standards. No Principality Open Data host was confirmed. These entries describe
+  the standard the reference spec targets, not verified live behaviour.
+standards:
+- id: obie-open-data-v1.3
+  conforms: true
+  evidence: >-
+    spec info.title "Open Data API" version v1.3; OBIE Open Data resource paths
+    (branches, atms, personal/business current accounts, unsecured SME loans,
+    commercial credit cards)
+- id: open-data-public-unauthenticated
+  conforms: true
+  evidence: no securityDefinitions and no global security; Open Data is public
+    reference data under the Open Banking Open Licence
+- id: rest-json
+  conforms: true
+  evidence: >-
+    produces application/prs.openbanking.opendata.v1.3+json; RESTful GET/HEAD
+    resource collections
+- id: http-caching
+  conforms: true
+  evidence: responses declare ETag and Cache-Control (max-age=28800) headers
+- id: hsts
+  conforms: true
+  evidence: responses declare Strict-Transport-Security max-age=31536000
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: error responses carry descriptions only, no application/problem+json
+    schema
+- id: psd2-read-write
+  conforms: false
+  evidence: >-
+    Open Data only; Principality holds no payment accounts and operates no
+    AIS/PIS/CBPII endpoints
+- id: fapi
+  conforms: false
+  evidence: not applicable to unauthenticated Open Data

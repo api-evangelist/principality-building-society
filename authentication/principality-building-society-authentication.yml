@@ -1,0 +1,23 @@
+generated: '2026-07-23'
+method: derived
+source: openapi/obie-open-data-swagger.json
+note: >-
+  Derived from the shared OBIE Open Data API v1.3 reference specification carried
+  in this repo, NOT a Principality-operated endpoint. The Open Data API is public
+  reference data and defines no security schemes. The OBIE Read/Write APIs
+  (AIS/PIS/CBPII) that Principality does NOT operate would, by the standard, use
+  FAPI-secured OAuth2/OIDC + mutual-TLS + PSD2 SCA; that model is documented in
+  the standard only and no Principality authorization server exists.
+summary:
+  types: [none]
+  api_key_in: []
+  oauth2_flows: []
+  public_unauthenticated: true
+schemes: []
+standard_read_write_model:
+  applies_to: OBIE Read/Write AIS/PIS/CBPII (out of scope for Principality)
+  security: FAPI 1.0 Advanced
+  auth: OAuth2 authorization code + OIDC
+  transport: mutual-TLS
+  customer_auth: PSD2 strong customer authentication
+  operated_by_principality: false

@@ -1,0 +1,37 @@
+generated: '2026-07-23'
+method: derived
+source: openapi/obie-open-data-swagger.json
+note: >-
+  Derived from the shared OBIE Open Data API v1.3 reference specification carried
+  in this repo, NOT from a Principality-operated endpoint. Every path returns the
+  same standard error set; the spec defines only response descriptions (no
+  application/problem+json schema, no operationIds), so these are cataloged by
+  HTTP status. Principality is not confirmed to operate this API.
+format: http-status
+media_type: application/prs.openbanking.opendata.v1.3+json
+applies_to_paths:
+- /branches
+- /atms
+- /personal-current-accounts
+- /business-current-accounts
+- /unsecured-sme-loans
+- /commercial-credit-cards
+problems:
+- status: 400
+  title: Bad Request
+  detail: You have sent a request which could not be understood.
+- status: 408
+  title: Request Timeout
+  detail: Your client has failed to submit a request, and a timeout has occurred.
+- status: 429
+  title: Too Many Requests
+  detail: You have requested this resource too often. Slow down.
+- status: 500
+  title: Internal Server Error
+  detail: An error occurred on the server. No further information is available.
+- status: 503
+  title: Service Unavailable
+  detail: The service is temporarily unavailable.
+- status: default
+  title: Standard Error
+  detail: A standard error response.

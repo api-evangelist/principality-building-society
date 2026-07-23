@@ -125,6 +125,16 @@ apis:
   - PSD2
   - FAPI
 common:
+- type: DomainSecurity
+  url: security/principality-building-society-domain-security.yml
+- type: Authentication
+  url: authentication/principality-building-society-authentication.yml
+- type: Conformance
+  url: conformance/principality-building-society-conformance.yml
+- type: ErrorCatalog
+  url: errors/principality-building-society-problem-types.yml
+- type: LLMsTxt
+  url: llms/principality-building-society-llms.txt
 - type: Website
   url: https://www.principality.co.uk/
 - type: About

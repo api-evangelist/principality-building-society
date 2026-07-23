@@ -1,0 +1,29 @@
+# Principality Building Society
+
+> Principality Building Society is the largest building society in Wales and the sixth largest in the United Kingdom, founded in 1860 and headquartered in Cardiff. It is a mutual, owned by and run for the benefit of its members, holding total assets of more than £11 billion across around 71 branches and agencies. Its product range is deliberately narrow — savings, residential mortgages and investments, plus commercial lending — and it does NOT offer current or payment accounts. Principality is authorised by the Prudential Regulation Authority and regulated by the Financial Conduct Authority and PRA.
+
+## API status
+
+> Principality is NOT one of the nine CMA9 banks and, because it holds no payment accounts, falls outside the scope of the PSD2 / OBIE Read/Write (AIS, PIS, CBPII) standard. It publishes no public developer portal and no confirmed OBIE Open Data host (probes to developer.principality.co.uk and api.principality.co.uk did not resolve). The OpenAPI below is the SHARED OBIE Open Data standard for reference only, not a Principality-operated contract.
+
+## Specs (shared OBIE standard — reference only)
+
+- [OBIE Open Data API v1.3 (Swagger)](openapi/obie-open-data-swagger.json): Public unauthenticated reference data — branches, ATMs, current accounts, unsecured SME loans, commercial credit cards
+- [OBIE Open Data docs](https://openbankinguk.github.io/opendata-api-docs-pub/v2.4.0/)
+- [OBIE Read/Write API specs](https://github.com/OpenBankingUK/read-write-api-specs): AIS/PIS/CBPII standard (out of scope for Principality)
+
+## Artifacts
+
+- [Conformance](conformance/principality-building-society-conformance.yml): Standards the reference spec targets
+- [Problem types](errors/principality-building-society-problem-types.yml): HTTP error catalog from the Open Data spec
+- [Authentication](authentication/principality-building-society-authentication.yml): Public/unauthenticated for Open Data
+- [Domain security](security/principality-building-society-domain-security.yml): TLS/HSTS/SPF/DMARC probe of principality.co.uk
+
+## Company
+
+- [Website](https://www.principality.co.uk/)
+- [About](https://www.principality.co.uk/home/about-us)
+- [News](https://www.principality.co.uk/home/about-us/principality-news)
+- [Help and support](https://www.principality.co.uk/home/contact-us/help-and-support)
+- [Terms of use](https://www.principality.co.uk/home/terms-of-use)
+- [Privacy and security](https://www.principality.co.uk/home/terms-of-use/privacy-and-security)
