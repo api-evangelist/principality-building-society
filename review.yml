@@ -1,0 +1,94 @@
+aid: principality-building-society
+name: Principality Building Society
+review:
+  question: Does Principality Building Society operate a public developer portal, a confirmed OBIE Open Data endpoint, and OBIE Read/Write conformance?
+  answer: false
+  date: '2026-07-23'
+  reviewer: API Evangelist
+findings:
+  summary: |
+    Principality Building Society is the largest building society in Wales and the
+    sixth largest in the UK - a member-owned mutual (founded 1860, Cardiff, ~£11bn
+    assets, ~71 branches) offering savings, mortgages and investments plus commercial
+    lending. Critically, it does NOT offer current or payment accounts. It is
+    authorised by the PRA and regulated by the FCA/PRA, but it is NOT one of the nine
+    CMA9 banks mandated to deliver UK Open Banking. Because it holds no payment
+    accounts, it is outside the scope of the PSD2 / OBIE Read/Write standard (AIS,
+    PIS, CBPII).
+
+    No public developer portal was found. Probes to developer.principality.co.uk and
+    openbanking.principality.co.uk failed to resolve (connection error / no DNS), and
+    www.principality.co.uk/open-banking and the /.well-known/open-banking path both
+    returned HTTP 404. No live OBIE Open Data endpoint (branches/ATMs) could be
+    confirmed for Principality; the standard Open Data host shape
+    (/open-banking/v2.3/atms) was not reachable on a Principality domain and none was
+    fabricated.
+
+    The Open Banking API family is therefore represented in apis.yml as the SHARED
+    OBIE STANDARD for reference only, clearly labelled unverified / out-of-scope. The
+    only real artifact harvested is the OBIE Open Data API standard OpenAPI (Swagger
+    2.0, v1.3) pulled verbatim from the official OpenBankingUK/opendata-api-spec-compiled
+    repository - this is the shared standard, NOT a Principality contract.
+  authModel:
+    readWriteStandard: OBIE Read/Write API Standard (FAPI OAuth2/OIDC + mutual-TLS + PSD2 SCA)
+    applicabilityToPrincipality: out-of-scope
+    reason: No payment accounts offered; not a CMA9 ASPSP; no developer portal or client onboarding.
+  specProvenance:
+    - artifact: openapi/obie-open-data-swagger.json
+      title: Open Data API
+      version: v1.3
+      swagger: '2.0'
+      provenance: OBIE shared standard
+      source: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+      note: Official OBIE Open Data specification, harvested verbatim. NOT a Principality-issued or Principality-hosted contract.
+  probes:
+    - url: https://developer.principality.co.uk
+      status: 000
+      note: Did not resolve / connection failed - no developer subdomain.
+    - url: https://openbanking.principality.co.uk
+      status: 000
+      note: Did not resolve / connection failed.
+    - url: https://api.principality.co.uk/open-banking/v2.3/atms
+      status: 000
+      note: Did not resolve - standard OBIE Open Data path not served on a Principality host.
+    - url: https://api.principality.co.uk/open-banking/v3.1/atms
+      status: 000
+      note: Did not resolve.
+    - url: https://www.principality.co.uk/open-banking
+      status: 404
+      note: No Open Banking landing page.
+    - url: https://www.principality.co.uk/.well-known/open-banking/atms
+      status: 404
+      note: No .well-known open-banking discovery document.
+    - url: https://www.principality.co.uk/
+      status: 200
+      note: Corporate site live (savings, mortgages, investments; no developer/API area).
+  transports:
+    - protocol: REST
+      scheme: https
+      documented: false
+      note: No Principality-operated REST API surface is documented or reachable.
+    - protocol: OBIE Open Data (REST/JSON)
+      scheme: https
+      documented: standard-only
+      note: Shared OBIE Open Data standard exists; no Principality endpoint confirmed.
+    - protocol: OBIE Read/Write (FAPI REST)
+      scheme: https
+      documented: standard-only
+      note: Out of scope - no payment accounts; no ASPSP onboarding.
+sources:
+  - url: https://en.wikipedia.org/wiki/Principality_Building_Society
+    type: Reference
+    note: Identity - founding 1860, Cardiff, mutual, ~£11bn assets, ~71 branches, savings/mortgages/investments + commercial lending.
+  - url: https://www.principality.co.uk/
+    type: Website
+    note: Live corporate site; product set is savings and mortgages, no current accounts, no developer area.
+  - url: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+    type: SourceCode
+    note: Source of the harvested OBIE Open Data standard OpenAPI.
+  - url: https://openbankinguk.github.io/opendata-api-docs-pub/v2.4.0/
+    type: Documentation
+    note: OBIE Open Data specification documentation.
+  - url: https://github.com/OpenBankingUK/read-write-api-specs
+    type: SourceCode
+    note: OBIE Read/Write standard specs (referenced, out of scope for Principality).
