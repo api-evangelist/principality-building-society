@@ -21,6 +21,19 @@ description: >-
   standard for reference only, not as a Principality-operated contract.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
+- Financial-Services
+- Banking
+- Building Society
+- Savings
+- Mortgages
+- Open Banking
+- Open Data
+- PSD2
+- OBIE
+- United Kingdom
+- Wales
+- Mutual
+tags_raw:
 - Financial Services
 - Banking
 - Building Society
