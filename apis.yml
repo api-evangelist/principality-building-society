@@ -50,43 +50,14 @@ created: '2026-07-23'
 modified: '2026-07-23'
 specificationVersion: '0.23'
 apis:
-- aid: principality-building-society:obie-open-data-api
-  name: OBIE Open Data API (Shared Standard - Unverified for Principality)
-  description: >-
-    The UK Open Banking Implementation Entity (OBIE) Open Data API standard -
-    public, unauthenticated reference data covering Branches, ATMs, Personal
-    Current Accounts, Business Current Accounts, Unsecured SME Loans and
-    Commercial Credit Cards. This entry represents the SHARED OBIE standard
-    (Open Data API v1.3); no live Principality Open Data host was confirmed
-    (probes to developer.principality.co.uk and api.principality.co.uk failed to
-    resolve, and /open-banking returned 404). Principality is not a CMA9 bank and
-    is not known to publish these endpoints. The harvested OpenAPI is the OBIE
-    standard, not a Principality contract.
-  humanURL: https://openbankinguk.github.io/opendata-api-docs-pub/v2.4.0/
-  properties:
-  - type: OpenAPI
-    url: openapi/obie-open-data-swagger.json
-  - type: Documentation
-    url: https://openbankinguk.github.io/knowledge-base-pub/standards/open-data.html
-  - type: APIReference
-    url: https://openbankinguk.github.io/opendata-api-docs-pub/v2.4.0/
-  - type: SourceCode
-    url: https://github.com/OpenBankingUK/opendata-api-spec-compiled
-  tags:
-  - Open Data
-  - Branches
-  - ATMs
-  - Reference Data
 - aid: principality-building-society:obie-account-transaction-api
   name: OBIE Account & Transaction Information API (AIS - Standard, Out of Scope)
   description: >-
-    The OBIE Read/Write Account and Transaction Information (AISP) standard for
-    reading account, balance and transaction data. FAPI-secured with OAuth2/OIDC,
-    mutual-TLS and PSD2 strong customer authentication. Represented here as the
-    documented OBIE standard only - Principality offers no current or payment
-    accounts, publishes no ASPSP developer portal, and is therefore OUTSIDE the
-    scope of this Read/Write API. No Principality base URL or credentials exist;
-    none are invented.
+    The OBIE Read/Write Account and Transaction Information (AISP) standard for reading account, balance
+    and transaction data. FAPI-secured with OAuth2/OIDC, mutual-TLS and PSD2 strong customer authentication.
+    Represented here as the documented OBIE standard only - Principality offers no current or payment
+    accounts, publishes no ASPSP developer portal, and is therefore OUTSIDE the scope of this Read/Write
+    API. No Principality base URL or credentials exist; none are invented.
   humanURL: https://github.com/OpenBankingUK/read-write-api-specs
   properties:
   - type: Documentation
@@ -101,12 +72,10 @@ apis:
 - aid: principality-building-society:obie-payment-initiation-api
   name: OBIE Payment Initiation API (PIS - Standard, Out of Scope)
   description: >-
-    The OBIE Read/Write Payment Initiation (PISP) standard for initiating domestic,
-    scheduled, standing-order, international and file payments. FAPI-secured with
-    OAuth2/OIDC, mutual-TLS and PSD2 strong customer authentication. Represented as
-    the documented OBIE standard only - Principality holds no payment accounts and
-    operates no PISP endpoint, so this is out of scope. No Principality host is
-    fabricated.
+    The OBIE Read/Write Payment Initiation (PISP) standard for initiating domestic, scheduled, standing-order,
+    international and file payments. FAPI-secured with OAuth2/OIDC, mutual-TLS and PSD2 strong customer
+    authentication. Represented as the documented OBIE standard only - Principality holds no payment accounts
+    and operates no PISP endpoint, so this is out of scope. No Principality host is fabricated.
   humanURL: https://github.com/OpenBankingUK/read-write-api-specs
   properties:
   - type: Documentation
@@ -121,11 +90,10 @@ apis:
 - aid: principality-building-society:obie-confirmation-of-funds-api
   name: OBIE Confirmation of Funds API (CBPII - Standard, Out of Scope)
   description: >-
-    The OBIE Read/Write Confirmation of Funds (CBPII) standard for confirming
-    whether funds are available on a payment account. FAPI-secured with OAuth2/OIDC,
-    mutual-TLS and PSD2 strong customer authentication. Represented as the
-    documented OBIE standard only - Principality offers no payment accounts and
-    provides no CBPII endpoint. No Principality host is invented.
+    The OBIE Read/Write Confirmation of Funds (CBPII) standard for confirming whether funds are available
+    on a payment account. FAPI-secured with OAuth2/OIDC, mutual-TLS and PSD2 strong customer authentication.
+    Represented as the documented OBIE standard only - Principality offers no payment accounts and provides
+    no CBPII endpoint. No Principality host is invented.
   humanURL: https://github.com/OpenBankingUK/read-write-api-specs
   properties:
   - type: Documentation
@@ -137,6 +105,96 @@ apis:
   - CBPII
   - PSD2
   - FAPI
+- aid: principality-building-society:principality-building-society-atm-api
+  name: Principality Building Society ATM API
+  description: Endpoint for getting ATM data
+  humanURL: https://openbankinguk.github.io/opendata-api-docs-pub/v2.4.0/
+  tags:
+  - ATM
+  properties:
+  - type: OpenAPI
+    url: openapi/principality-building-society-atm-api-openapi.yml
+  - type: Documentation
+    url: https://openbankinguk.github.io/knowledge-base-pub/standards/open-data.html
+  - type: APIReference
+    url: https://openbankinguk.github.io/opendata-api-docs-pub/v2.4.0/
+  - type: SourceCode
+    url: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+- aid: principality-building-society:principality-building-society-bca-api
+  name: Principality Building Society BCA API
+  description: Endpoint for getting Business Current Account data
+  humanURL: https://openbankinguk.github.io/opendata-api-docs-pub/v2.4.0/
+  tags:
+  - BCA
+  properties:
+  - type: OpenAPI
+    url: openapi/principality-building-society-bca-api-openapi.yml
+  - type: Documentation
+    url: https://openbankinguk.github.io/knowledge-base-pub/standards/open-data.html
+  - type: APIReference
+    url: https://openbankinguk.github.io/opendata-api-docs-pub/v2.4.0/
+  - type: SourceCode
+    url: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+- aid: principality-building-society:principality-building-society-branch-api
+  name: Principality Building Society Branch API
+  description: Endpoint for getting Branch data
+  humanURL: https://openbankinguk.github.io/opendata-api-docs-pub/v2.4.0/
+  tags:
+  - Branch
+  properties:
+  - type: OpenAPI
+    url: openapi/principality-building-society-branch-api-openapi.yml
+  - type: Documentation
+    url: https://openbankinguk.github.io/knowledge-base-pub/standards/open-data.html
+  - type: APIReference
+    url: https://openbankinguk.github.io/opendata-api-docs-pub/v2.4.0/
+  - type: SourceCode
+    url: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+- aid: principality-building-society:principality-building-society-ccc-api
+  name: Principality Building Society CCC API
+  description: Endpoint for getting Commercial Credit Card data
+  humanURL: https://openbankinguk.github.io/opendata-api-docs-pub/v2.4.0/
+  tags:
+  - CCC
+  properties:
+  - type: OpenAPI
+    url: openapi/principality-building-society-ccc-api-openapi.yml
+  - type: Documentation
+    url: https://openbankinguk.github.io/knowledge-base-pub/standards/open-data.html
+  - type: APIReference
+    url: https://openbankinguk.github.io/opendata-api-docs-pub/v2.4.0/
+  - type: SourceCode
+    url: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+- aid: principality-building-society:principality-building-society-pca-api
+  name: Principality Building Society PCA API
+  description: Endpoint for getting Personal Current Account data
+  humanURL: https://openbankinguk.github.io/opendata-api-docs-pub/v2.4.0/
+  tags:
+  - PCA
+  properties:
+  - type: OpenAPI
+    url: openapi/principality-building-society-pca-api-openapi.yml
+  - type: Documentation
+    url: https://openbankinguk.github.io/knowledge-base-pub/standards/open-data.html
+  - type: APIReference
+    url: https://openbankinguk.github.io/opendata-api-docs-pub/v2.4.0/
+  - type: SourceCode
+    url: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+- aid: principality-building-society:principality-building-society-sme-api
+  name: Principality Building Society SME API
+  description: Endpoint for getting Unsecured SME Loan data
+  humanURL: https://openbankinguk.github.io/opendata-api-docs-pub/v2.4.0/
+  tags:
+  - SME
+  properties:
+  - type: OpenAPI
+    url: openapi/principality-building-society-sme-api-openapi.yml
+  - type: Documentation
+    url: https://openbankinguk.github.io/knowledge-base-pub/standards/open-data.html
+  - type: APIReference
+    url: https://openbankinguk.github.io/opendata-api-docs-pub/v2.4.0/
+  - type: SourceCode
+    url: https://github.com/OpenBankingUK/opendata-api-spec-compiled
 common:
 - type: DomainSecurity
   url: security/principality-building-society-domain-security.yml
