@@ -19,6 +19,19 @@ description: >-
   portal and no confirmed OBIE Open Data API endpoint; the Open Banking API family
   below is represented as the shared Open Banking Implementation Entity (OBIE)
   standard for reference only, not as a Principality-operated contract.
+deliveryModel:
+  model: unknown
+  open_source: unknown
+  commercial: true
+  callable_host: false
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - openapi
+  - pricing
+  - repository-unlicensed
+  generated: '2026-08-28'
+  method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
 - Financial-Services
@@ -196,6 +209,8 @@ apis:
   - type: SourceCode
     url: https://github.com/OpenBankingUK/opendata-api-spec-compiled
 common:
+- type: IssueTracker
+  url: https://github.com/OpenBankingUK/opendata-api-spec-compiled/issues
 - type: DomainSecurity
   url: security/principality-building-society-domain-security.yml
 - type: Authentication
