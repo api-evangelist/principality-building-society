@@ -51,7 +51,7 @@ tags:
 - Banking
 - Building Society
 - Savings
-- Mortgages
+- Mortgage
 - Open Banking
 - Open Data
 - PSD2
@@ -109,6 +109,11 @@ apis:
   - type: APIReference
     url: https://openbankinguk.github.io/read-write-api-site3/
   tags:
+  - Payment Initiation
+  - PI
+  - PSD2
+  - FAPI
+  tags_raw:
   - Payment Initiation
   - PIS
   - PSD2
