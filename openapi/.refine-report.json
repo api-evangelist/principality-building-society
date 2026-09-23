@@ -1,0 +1,30 @@
+{
+  "provider": "principality-building-society",
+  "sources": [
+    "_original/obie-open-data-swagger.json"
+  ],
+  "outputs": [
+    "principality-building-society-atm-api-openapi.yml",
+    "principality-building-society-bca-api-openapi.yml",
+    "principality-building-society-branch-api-openapi.yml",
+    "principality-building-society-ccc-api-openapi.yml",
+    "principality-building-society-pca-api-openapi.yml",
+    "principality-building-society-sme-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "obie-open-data-swagger.json: upgraded swagger 2.0 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "principality-building-society-atm-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "principality-building-society-bca-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "principality-building-society-branch-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "principality-building-society-ccc-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "principality-building-society-pca-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "principality-building-society-sme-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
+}
