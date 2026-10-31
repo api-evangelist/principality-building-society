@@ -1,4 +1,4 @@
-# Principality Building Society (principality-building-society)
+# Principality Building Society
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,119 +64,101 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Principality Building Society is the largest building society in Wales and the sixth largest in the United Kingdom, founded in 1860 and headquartered in Cardiff. It is a mutual, owned by and run for the benefit of its members rather than shareholders, with total assets of more than £11 billion and around 71 branches and agencies. Its products are savings, residential mortgages and investments, plus a commercial lending division. It does not offer current or payment accounts. It is authorised by the Prudential Regulation Authority and regulated by the FCA and PRA, and is a member of the Building Societies Association.
+Principality Building Society is the largest building society in Wales and the sixth largest in the United Kingdom, founded in 1860 and headquartered in Cardiff. It is a mutual, owned by and run for the benefit of its members rather than shareholders, holding total assets of more than £11 billion and operating around 71 branches and agencies alongside internet and telephone channels. Its product range is deliberately narrow - savings, residential mortgages and investments, plus a commercial lending division - and it does NOT offer current or payment accounts. Principality is authorised by the Prudential Regulation Authority and regulated by the Financial Conduct Authority and the PRA, and is a member of the Building Societies Association. It is NOT one of the nine CMA9 banks mandated to deliver UK Open Banking, and because it holds no payment accounts it falls outside the scope of the PSD2 / OBIE Read/Write (AIS, PIS, CBPII) standard. As of this profile Principality publishes no public developer portal and no confirmed OBIE Open Data API endpoint; the Open Banking API family below is represented as the shared Open Banking Implementation Entity (OBIE) standard for reference only, not as a Principality-operated contract.
 
-Principality is **not** one of the CMA9 banks mandated to deliver UK Open Banking, and because it holds no payment accounts it is outside the scope of the PSD2 / OBIE Read/Write standard. As of this profile it publishes no public developer portal and no confirmed OBIE Open Data endpoint. The Open Banking APIs listed below are represented as the shared OBIE standard for reference only, not as Principality-operated contracts.
+**Areas:** Financial Services · Banking · Building Society · Savings · Mortgage · Open Banking · Open Data · PSD2 · OBIE · United Kingdom · Wales · Mutual
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/principality-building-society/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/principality-building-society/refs/heads/main/apis.yml)
+## Principality Building Society on APIs.io
 
-## Tags
+Everything profiled for Principality Building Society is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/principality-building-society/](https://apis.io/providers/principality-building-society/)** — or go straight to one of the APIs or properties below.
 
-- Financial Services
-- Banking
-- Building Society
-- Savings
-- Mortgages
-- Open Banking
-- Open Data
-- PSD2
-- OBIE
-- United Kingdom
-- Wales
-- Mutual
+### APIs (9)
 
-## Timestamps
+- [OBIE Account & Transaction Information API (AIS - Standard, Out of Scope)](https://apis.io/apis/principality-building-society/obie-account-transaction-api/) — The OBIE Read/Write Account and Transaction Information (AISP) standard for reading account, balance and transaction data. FAPI-secured with OAuth2/OIDC,…
+- [OBIE Payment Initiation API (PIS - Standard, Out of Scope)](https://apis.io/apis/principality-building-society/obie-payment-initiation-api/) — The OBIE Read/Write Payment Initiation (PISP) standard for initiating domestic, scheduled, standing-order, international and file payments. FAPI-secured…
+- [OBIE Confirmation of Funds API (CBPII - Standard, Out of Scope)](https://apis.io/apis/principality-building-society/obie-confirmation-of-funds-api/) — The OBIE Read/Write Confirmation of Funds (CBPII) standard for confirming whether funds are available on a payment account. FAPI-secured with OAuth2/OIDC,…
+- [Principality Building Society ATM API](https://apis.io/apis/principality-building-society/principality-building-society-atm-api/) — Endpoint for getting ATM data
+- [Principality Building Society BCA API](https://apis.io/apis/principality-building-society/principality-building-society-bca-api/) — Endpoint for getting Business Current Account data
+- [Principality Building Society Branch API](https://apis.io/apis/principality-building-society/principality-building-society-branch-api/) — Endpoint for getting Branch data
+- [Principality Building Society CCC API](https://apis.io/apis/principality-building-society/principality-building-society-ccc-api/) — Endpoint for getting Commercial Credit Card data
+- [Principality Building Society PCA API](https://apis.io/apis/principality-building-society/principality-building-society-pca-api/) — Endpoint for getting Personal Current Account data
+- [Principality Building Society SME API](https://apis.io/apis/principality-building-society/principality-building-society-sme-api/) — Endpoint for getting Unsecured SME Loan data
 
-- **Created:** 2026-07-23
-- **Modified:** 2026-07-23
+### Published properties
 
-## APIs
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-### OBIE Open Data API (Shared Standard - Unverified for Principality)
+#### Collections (1)
 
-The UK Open Banking Implementation Entity (OBIE) Open Data API standard - public, unauthenticated reference data covering Branches, ATMs, Personal Current Accounts, Business Current Accounts, Unsecured SME Loans and Commercial Credit Cards. No live Principality Open Data host was confirmed; the harvested OpenAPI is the OBIE standard (Open Data API v1.3), not a Principality contract.
+Postman and Open Collection request collections.
 
-- **Human URL:** [https://openbankinguk.github.io/opendata-api-docs-pub/v2.4.0/](https://openbankinguk.github.io/opendata-api-docs-pub/v2.4.0/)
+- [Open Data API](https://apis.io/collections/principality-building-society/open-obie-open-data-swagger/)
 
-#### Tags
+#### Security (2)
 
-- Open Data
-- Branches
-- ATMs
-- Reference Data
+Authentication, trust centre, and vulnerability disclosure.
 
-#### Properties
+- [Principality Building Society Authentication](https://apis.io/security/principality-building-society/principality-building-society-authentication/)
+- [Principality Building Society Domain Security](https://apis.io/security/principality-building-society/principality-building-society-domain-security/)
 
-- [OpenAPI](openapi/obie-open-data-swagger.json)
-- [Documentation](https://openbankinguk.github.io/knowledge-base-pub/standards/open-data.html)
-- [API Reference](https://openbankinguk.github.io/opendata-api-docs-pub/v2.4.0/)
-- [Source Code](https://github.com/OpenBankingUK/opendata-api-spec-compiled)
+## Where to find this API
 
-### OBIE Account & Transaction Information API (AIS - Standard, Out of Scope)
-
-The OBIE Read/Write Account and Transaction Information (AISP) standard, FAPI-secured with OAuth2/OIDC, mutual-TLS and PSD2 strong customer authentication. Represented as the documented OBIE standard only - Principality offers no current or payment accounts and publishes no ASPSP developer portal.
-
-- **Human URL:** [https://github.com/OpenBankingUK/read-write-api-specs](https://github.com/OpenBankingUK/read-write-api-specs)
-
-#### Tags
-
-- Account Information
-- AIS
-- PSD2
-- FAPI
-
-#### Properties
-
-- [Documentation](https://github.com/OpenBankingUK/read-write-api-specs)
-- [API Reference](https://openbankinguk.github.io/read-write-api-site3/)
-
-### OBIE Payment Initiation API (PIS - Standard, Out of Scope)
-
-The OBIE Read/Write Payment Initiation (PISP) standard, FAPI-secured with OAuth2/OIDC, mutual-TLS and PSD2 strong customer authentication. Represented as the documented OBIE standard only - Principality holds no payment accounts and operates no PISP endpoint.
-
-- **Human URL:** [https://github.com/OpenBankingUK/read-write-api-specs](https://github.com/OpenBankingUK/read-write-api-specs)
-
-#### Tags
-
-- Payment Initiation
-- PIS
-- PSD2
-- FAPI
-
-#### Properties
-
-- [Documentation](https://github.com/OpenBankingUK/read-write-api-specs)
-- [API Reference](https://openbankinguk.github.io/read-write-api-site3/)
-
-### OBIE Confirmation of Funds API (CBPII - Standard, Out of Scope)
-
-The OBIE Read/Write Confirmation of Funds (CBPII) standard, FAPI-secured with OAuth2/OIDC, mutual-TLS and PSD2 strong customer authentication. Represented as the documented OBIE standard only - Principality offers no payment accounts and provides no CBPII endpoint.
-
-- **Human URL:** [https://github.com/OpenBankingUK/read-write-api-specs](https://github.com/OpenBankingUK/read-write-api-specs)
-
-#### Tags
-
-- Confirmation of Funds
-- CBPII
-- PSD2
-- FAPI
-
-#### Properties
-
-- [Documentation](https://github.com/OpenBankingUK/read-write-api-specs)
-- [API Reference](https://openbankinguk.github.io/read-write-api-site3/)
-
-## Common Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.principality.co.uk/)
-- [About](https://www.principality.co.uk/home/about-us)
-- [News](https://www.principality.co.uk/home/about-us/principality-news)
 - [Support](https://www.principality.co.uk/home/contact-us/help-and-support)
-- [Terms of Service](https://www.principality.co.uk/home/terms-of-use)
-- [Privacy Policy](https://www.principality.co.uk/home/terms-of-use/privacy-and-security)
-- [LinkedIn](https://www.linkedin.com/company/principality-building-society/)
+- [Terms of service](https://www.principality.co.uk/home/terms-of-use)
+- [Privacy policy](https://www.principality.co.uk/home/terms-of-use/privacy-and-security)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 34.6** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 65.2 |
+| Contract quality | 35.5 |
+| Contract governance | 4.5 |
+| Operational transparency | 5.3 |
+| Developer ergonomics | 33.3 |
+| Access clarity | 57.1 |
+
+**Agent readiness 18.8** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | na |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | na |
+| Error Semantics | derived (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | na |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 19.7** — Banking & Open Finance
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/principality-building-society/](https://apis.io/providers/principality-building-society/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Principality Building Society: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/principality-building-society/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
